@@ -1,5 +1,7 @@
 package com.company.Class;
 
+import com.company.engine.GameContainer;
+
 import java.awt.image.DataBufferInt;
 
 public class Renderer {

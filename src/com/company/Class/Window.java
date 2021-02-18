@@ -1,5 +1,7 @@
 package com.company.Class;
 
+import com.company.engine.GameContainer;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -46,5 +48,9 @@ public class Window {
 
     public Canvas getCanvas() {
         return canvas;
+    }
+
+    public JFrame getFrame() {
+        return frame;
     }
 }
