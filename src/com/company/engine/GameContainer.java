@@ -16,7 +16,6 @@ public class GameContainer implements Runnable {
 
     public void start() {
         thread = new Thread(this);
-
         thread.run();
     }
 
@@ -47,7 +46,7 @@ public class GameContainer implements Runnable {
             render = false;
 
             firstTime = System.nanoTime() / 1000000000.0;
-            passedTime = firstTime - passedTime;
+            passedTime = firstTime - lastTime;
             lastTime = firstTime;
 
             unprocessedTime += passedTime;
