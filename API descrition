@@ -1,0 +1,4 @@
+.GameContainer         main funcitons, such as Start Stop run and dispose. Used for the main flow of the game
+.Window                controlls the fucntions needed for game window that gets updated
+.Renderer              Renders the window
+.Input                 Reposnible for detection and controlling of input from the user
