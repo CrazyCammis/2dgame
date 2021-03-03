@@ -1,15 +1,21 @@
 package com.company.engine;
 
+import com.company.Class.AbstractGame;
+
 public class GameContainer implements Runnable {
 
 
     private Thread thread;
-
+    private int width = 320, height = 240;
+    private float scale = 1f;
+    private String title = "Engine v1.0";
+    private AbstractGame game;
     private boolean running = false;
     private final double UPDATE_CAP = 1.0 / 60.0;
 
 
-    public GameContainer() {
+    public GameContainer(AbstractGame game) {
+        this.game = game;
 
     }
 
@@ -61,7 +67,7 @@ public class GameContainer implements Runnable {
                 unprocessedTime -= UPDATE_CAP;
                 render = true;
 
-                //TODO: UPDATE GAME
+                game.update(ga);
                 if(frameTime >= 1.0){
                     frameTime= 0;
                     fps = frames;
@@ -97,6 +103,8 @@ public class GameContainer implements Runnable {
         gc.start();
 
     }
+
+
 
 
 }
