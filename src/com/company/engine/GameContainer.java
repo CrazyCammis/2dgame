@@ -6,6 +6,7 @@ public class GameContainer implements Runnable {
 
 
     private Thread thread;
+
     private int width = 320, height = 240;
     private float scale = 1f;
     private String title = "Engine v1.0";
@@ -105,8 +106,37 @@ public class GameContainer implements Runnable {
     }
 
 
+    public int getHeight() {
+        return height;
+    }
 
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public float getScale() {
+        return scale;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
 
 
