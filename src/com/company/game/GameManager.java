@@ -3,13 +3,15 @@ package com.company.game;
 import com.company.Class.AbstractGame;
 import com.company.Class.Renderer;
 import com.company.engine.GameContainer;
+import com.company.engine.gfx.Image;
 
 import java.awt.event.KeyEvent;
 
 public class GameManager extends AbstractGame {
 
+    private Image image;
     public  GameManager(){
-
+        image = new Image("/testpic.png");
     }
     @Override
     public void update(GameContainer gameContainer, float dt) {
@@ -20,7 +22,7 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void render(GameContainer gameContainer, Renderer renderer) {
-
+        renderer.drawImage(image, gameContainer.getInput().getMouseX(), gameContainer.getInput().getMouseY());
     }
 
     public  static void main(String args[]){

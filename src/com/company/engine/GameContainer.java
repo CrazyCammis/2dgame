@@ -94,7 +94,6 @@ public class GameContainer implements Runnable {
             if (render) {
                 renderer.clear();
                 game.render(this, renderer);
-                //TODO; render game
                 window.update();
                 frames++;
             } else {
@@ -113,10 +112,6 @@ public class GameContainer implements Runnable {
     public void dispose() {
 
     }
-
-
-
-
 
     public int getHeight() {
         return height;
